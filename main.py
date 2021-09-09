@@ -3,6 +3,7 @@ import discord
 import datetime
 import openpyxl as openpyxl
 import asyncio
+import os
 client = discord.Client()
 
 
@@ -177,4 +178,6 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
 
-client.run("ODg0Nzk1MjEzOTkyODIwNzM3.YTdrwQ.qmFenZHjyhrRECNtmpSib5gEjUs")
+        
+access_token = os.environ["BOT_TOKEN"]        
+client.run(access_token)
