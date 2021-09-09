@@ -33,13 +33,21 @@ async def on_message(message):
         embed.add_field(name="서은규의 한마디 ", value="서은규: 아앙 주인님~~", inline=False)
         await message.author.send(embed=embed)
 
-    if message.content.startswith(prefix + "청소"):
-        number = int(message.content.split(" ")[1])
-        await message.delete()
-        await message.channel.purge(limit=number)
-        await message.channel.send(f"{number}개의 메시지를 삭제했습니다.")
-    global yes, no, voting, msgid, lit
+    if message.content.startswith ("!청소"):
+        i = (message.author.guild_permissions.administrator)
 
+        if i is True:
+            amount = message.content[4:]
+            await message.channel.purge(limit=1)
+            await message.channel.purge(limit=int(amount))
+
+            embed = discord.Embed(title="메시지 삭제 알림", description="최근 디스코드 채팅 {}개가\n관리자 {}님의 요청으로 인해 정상 삭제 조치 되었습니다".format(amount, message.author), color=0x000000)
+            embed.set_footer(text="Bot Made by.  #1741", icon_url="https://discordapp.com/channels/691615852620939274/703908401381376000/711859989177958410")
+            await message.channel.send(embed=embed)
+        
+        if i is False:
+            await message.channel.purge(limit=1)
+            await message.channel.send("{}, 당신은 명령어를 사용할 수 있는 권한이 없습니다".format(message.author.mention))
     if message.content.startswith(prefix + "아바타"):
         user = message.author
         await message.channel.send(f"{message.author.mention} **님의 아바타입니다.**")
