@@ -128,7 +128,7 @@ async def on_message(message):
       embed = discord.Embed(description=f'', colour=0x7AD7BE)
       embed.set_author(name=f"{message.author.name} 님의 도움말",icon_url=message.author.avatar_url)
       embed.add_field(name="현재 Szreav봇 핑", value=f">>> {int((client.latency * 1000))}'ms", inline = False)
-      embed.add_field(name="제작 기간", value=f">>> 2021-08-12 ~", inline = False)
+      embed.add_field(name="제작 기간", value=f">>> 2021-08-12 ~ 현재까지 개발중", inline = False)
       embed.add_field(name="사용 모듈", value=f">>> **[discord.py](https://discordpy.readthedocs.io/)** / **[Python](https://www.python.org/)** / **[Hcskr](https://github.com/331leo/hcskr_python)** 를 이용해 제작된 봇입니다", inline = False)
       embed.add_field(name="프로필 정보", value=f"- Szreav봇 \n>>> 디스코드 : Ssëüṅg#9197", inline = False)
       await message.reply(embed=embed,content='님에게 전송된 Szreav봇 정보', mention_author=True)
