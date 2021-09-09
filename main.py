@@ -184,25 +184,6 @@ async def on_message(message):
         embed.add_field(name='랜덤 주사위의 숫자는??', value=dice_value, inline=False)
         embed.set_thumbnail(url="https://discord.com/channels/707587767130914818/707762913556955216/707762960394878986")
         await message.channel.send(embed=embed)
-
-     if message.content.startswith(prefix + "핑"):
-        embed = discord.Embed(title=':ping_pong: 퐁!', color=self.cog.color['primary'])
-        embed.add_field(name='Discord 게이트웨이', value=f'{self.cog.bot.get_data("ping")[0]}ms')
-        embed.add_field(name='메시지 지연시간', value=str(mping))
-        pl = self.cog.bot.get_data("ping")[1]
-        if pl == 0:
-            pinglevel = ':blue_circle: 매우 좋음'
-        elif pl == 1:
-            pinglevel = ':green_circle: 양호함'
-        elif pl == 2:
-            pinglevel = ':yellow_circle: 보통'
-        elif pl == 3:
-            pinglevel = ':red_circle: 나쁨'
-        elif pl == 4:
-            pinglevel = ':white_circle: 매우나쁨'
-        embed.set_footer(text=pinglevel)
-        return embed
-
         
 access_token = os.environ['BOT_TOKEN']       
 client.run(access_token)
