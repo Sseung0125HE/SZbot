@@ -106,7 +106,7 @@ async def on_message(message):
       embed.add_field(name="굴려", value=f"``랜덤 주사위를 굴립니다. ``", inline= False)
       embed.add_field(name="아바타", value=f"``자신의 프로필 사진 (아바타) 를 출력합니다. ``", inline= False)
       embed.add_field(name="내정보", value=f"``명령어를 보낸 유저의 디스코드 정보를 전송합니다.``", inline= False)
-      embed.add_field(name="삭제", value=f"``지정한 수 만큼 채널에 메시지를 삭제합니다``", inline= False)
+      embed.add_field(name="청소", value=f"``지정한 수 만큼 채널에 메시지를 삭제합니다``", inline= False)
       embed.add_field(name="서버", value=f"``서버코드를 출력합니다.``", inline= False)
       embed.add_field(name="타이머", value=f"``타이머를 시작합니다. 예시(!타이머 5 => 타이머 5초 실행)``", inline= False)      
       embed.add_field(name="확률", value=f"``1~100의 숫자중 77이 당첨되면 상금 ''천원''이 주어지는 도박게임입니다.``", inline= False)
