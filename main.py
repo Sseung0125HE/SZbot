@@ -42,7 +42,7 @@ async def on_message(message):
             await message.channel.purge(limit=int(amount))
 
             embed = discord.Embed(title="메시지 삭제 알림", description="최근 디스코드 채팅 {}개가\n관리자 {}님의 요청으로 인해 정상 삭제 조치 되었습니다".format(amount, message.author), color=0x000000)
-            embed.set_footer(text="Bot Made by.  #1741", icon_url="https://discordapp.com/channels/691615852620939274/703908401381376000/711859989177958410")
+            embed.set_footer(text="Bot Made by.Ssëüṅg#9197", icon_url="https://cdn.discordapp.com/avatars/776356132117020683/8bbcbfc46a2f4adfa2ced2b451c53be3.webp?size=1024")
             await message.channel.send(embed=embed)
         
         if i is False:
