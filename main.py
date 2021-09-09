@@ -12,7 +12,7 @@ async def on_ready():
     print(client.user.id)
     print ("Szreav 봇 구동 준비 완료")
     game = discord.Game("!도움말")
-    await client.change_presence(status=discord.Status.idle, activity=game)
+    await client.change_presence(status=discord.Status.online, activity=game)
 
 prefix = ("!")
 
